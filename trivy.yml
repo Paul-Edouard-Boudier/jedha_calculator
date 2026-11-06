@@ -1,4 +1,2 @@
 format: 'sarif'
-severity:
-  - CRITICAL
-  - HIGH
+severity: 'CRITICAL,HIGH'
