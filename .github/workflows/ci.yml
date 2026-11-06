@@ -1,0 +1,26 @@
+# TODO: build your CI pipeline here (tests on multiple Python versions + Trivy scan).
+# See the exercise instructions.
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+      - name: Tests python
+        run: |
+          pytest ./tests
