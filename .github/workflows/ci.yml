@@ -1,5 +1,7 @@
 # TODO: build your CI pipeline here (tests on multiple Python versions + Trivy scan).
 # See the exercise instructions.
+name: CI pipeline
+
 on:
   push:
     branches:
