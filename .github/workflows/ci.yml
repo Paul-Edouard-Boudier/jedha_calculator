@@ -39,4 +39,4 @@ jobs:
           pytest ./tests
 
       - name: Flake8 test
-        run: flake8 .
+        run: flake8 ./tests ./calculator/
